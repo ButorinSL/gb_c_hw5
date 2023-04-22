@@ -1,0 +1,234 @@
+Задача 1: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+
+[345, 897, 568, 234] -> 2
+
+Задача 2: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+
+[3, 7, 23, 12] -> 19
+
+[-4, -6, 89, 6] -> 0
+
+Задача 3: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+
+[3 7 22 2 78] -> 76
+
+
+
+Владимир Морозов: // Задача 1: Задайте массив из 12 элементов,
+// заполненный случайными числами из промежутка [-9, 9].
+// Найдите сумму отрицательных и положительных элементов массива.
+// Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] сумма положительных чисел равна 29,
+// сумма отрицательных равна -20.
+
+int ReadInt(string msg)
+{
+    System.Console.Write($"{msg} > ");
+    return int.Parse(Console.ReadLine());
+}
+
+int[] CreateArray(int length, int minRnd, int maxRnd)
+{
+    int[] array = new int[length];
+    Random rnd = new Random();
+    for (int i = 0; i < length; i++)
+    {
+        array[i] = rnd.Next(minRnd, maxRnd + 1);
+    }
+    return array;
+}
+
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        System.Console.Write($"{array[i]}\t");
+    }
+    System.Console.WriteLine();
+}
+
+int SumSign(int[] array, bool isPositive = true)
+{
+    int sign = 1;
+    if (!isPositive)
+    {
+        sign = -1;
+    }
+
+    int sum = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] * s
+        
+        
+// Напишите программу замены элементов массива: положительные элементы
+// замените на соответствующие отрицательные, и наоборот.
+// [-4, -8, 8, 2] -> [4, 8, -8, -2]
+
+int ReadInt(string msg)
+{
+    System.Console.Write($"{msg} > ");
+    return int.Parse(Console.ReadLine());
+}
+
+int[] CreateArray(int length, int minRnd, int maxRnd)
+{
+    int[] array = new int[length];
+    Random rnd = new Random();
+    for (int i = 0; i < length; i++)
+    {
+        array[i] = rnd.Next(minRnd, maxRnd + 1);
+    }
+    return array;
+}
+
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        System.Console.Write($"{array[i]}\t");
+    }
+    System.Console.WriteLine();
+}
+
+void pozitiveEL(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] *= -1;
+    }
+}
+int len = ReadInt("Введите длину массива");
+int minRnd = ReadInt("Введите границу минимума случайной ведичины");
+int maxRnd = ReadInt("Введите границу максимума случайной ведичины");
+int[] array = CreateArray(len, minRnd, maxRn
+
+
+// Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
+// 4; массив [6, 7, 19, 345, 3] -> нет
+// 3; массив [6, 7, 19, 345, 3] -> да
+
+int ReadInt(string msg)
+{
+    System.Console.Write($"{msg} > ");
+    return int.Parse(Console.ReadLine());
+}
+
+int[] CreateArray(int length, int minRnd, int maxRnd)
+{
+    int[] array = new int[length];
+    Random rnd = new Random();
+    for (int i = 0; i < length; i++)
+    {
+        array[i] = rnd.Next(minRnd, maxRnd + 1);
+    }
+    return array;
+}
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        System.Console.Write($"{array[i]}\t");
+    }
+    System.Console.WriteLine();
+}
+bool Find(int[] array, int number)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] == number)
+        {
+            return true;
+        }
+
+    }
+    return false;
+}
+
+int len = ReadInt("Введите длину массива");
+int minRnd = ReadInt("Введите границу минимума случайной ведичины");
+int maxRnd = ReadInt("Вв
+
+
+
+Стас Луковский: // Задайте одномерный массив из 10 случайных чисел в диапазоне от 1 до 200.
+// Найдите количество двузначных элементов массива.
+// Пример для массива из 5, а не 10 элементов.
+// В своём решении сделайте для 10
+// [5, 18, 123, 6, 2] -> 1
+// [1, 2, 3, 6, 2] -> 0
+// [10, 11, 12, 13, 14] -> 5
+
+int ReadInt(string msg)
+{
+    System.Console.Write($"{msg} > ");
+    return int.Parse(Console.ReadLine());
+}
+
+int[] CreateArray(int length, int minRnd, int maxRnd)
+{
+    int[] array = new int[length];
+    Random rnd = new Random();
+    for (int i = 0; i < length; i++)
+    {
+        array[i] = rnd.Next(minRnd, maxRnd + 1);
+    }
+    return array;
+}
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        System.Console.Write($"{array[i]}\t");
+    }
+    System.Console.WriteLine();
+}
+int duble(int[] array)
+{
+    int chek = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (10 <= array[i] & array[i] < 100)
+            chek++;
+    }
+    return chek;
+}
+int len = ReadInt("Введите дли
+
+
+Екатерина: //Задача 4: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+//[1 2 3 4 5] -> internal class Program
+//[6 7 3 6]-> 36 21
+int ReadInt(string msg)
+{
+System.Console.Write($"{msg} > ");
+return int.Parse(Console.ReadLine());
+}
+
+int[] CreateArray(int length, int minRnd, int maxRnd)
+{
+    int[] array = new int[length];
+    Random rnd = new Random();
+    for (int i = 0; i < length; i++)
+    {
+        array[i] = rnd.Next(minRnd, maxRnd + 1);
+    }
+    return array;
+}
+
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        System.Console.Write($"{array[i]}\t");
+    }
+    System.Console.WriteLine();
+}
+int[] multiP(int[] mas1)
+{
+    int[] res = new int[mas1.Length / 2 + mas1.Length % 2];
+    int iLastres = res.Length - 1;
+    res[iLastres] = mas1[iLastres];
+    for (int i = 0; i < mas1.Length / 2; i++)
+    {
+        res[i] = mas1[i] * mas1[mas1.Length - 1 - i];
+    }
